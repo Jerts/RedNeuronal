@@ -1,0 +1,5 @@
+#Ignora los archivos objeto
+build
+
+#Ignora los ejecutables
+bin/*
