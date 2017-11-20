@@ -3,3 +3,6 @@ build
 
 #Ignora los ejecutables
 bin/*
+
+#Ignora los recursos
+rsc/*
