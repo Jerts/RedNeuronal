@@ -1,2 +1,2 @@
-bmpRead: src/bmpRead.cpp
-	g++ src/bmpRead.cpp -o build/bmpRead
+bmpRead: src/bmpReadClass.cpp src/main.cpp
+	g++ src/bmpReadClass.cpp src/main.cpp -o build/Test
