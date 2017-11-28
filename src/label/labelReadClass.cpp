@@ -32,8 +32,8 @@ void Etiqueta::read_lbl(int index){
     fread(&dataAux,1,1,lbl);
 
    
-   unsigned numero=(int)(*(unsigned char*)(&dataAux));
-    cout<<numero<<endl;
+   data=(int)(*(unsigned char*)(&dataAux));
+    cout<<data<<endl;
     fclose(lbl);
   }
 
