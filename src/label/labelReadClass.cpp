@@ -1,4 +1,5 @@
 #include "LabelReadClass.h"
+
 //Constructor
 Etiqueta::Etiqueta(char *nombre){
   cout<<nombre<<endl;
@@ -29,9 +30,10 @@ void Etiqueta::read_lbl(int index){
     cout<<"Archivo encontrado index: "<<current_index<<" Posicion: "<<num<<endl;
     
     fread(&dataAux,1,1,lbl);
+
    
-    printf("%x \n",  (int)(*(unsigned char*)(&dataAux)) );
-    
+   unsigned numero=(int)(*(unsigned char*)(&dataAux));
+    cout<<numero<<endl;
     fclose(lbl);
   }
 
