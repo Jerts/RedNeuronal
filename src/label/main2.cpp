@@ -10,6 +10,7 @@ int main(){
 //Lee 10 imagenes
   for (int n = 0; n < 10; n++) {
     prueba.read_lbl(n);
+    
   }
       cout<<endl;
   system("PAUSE");

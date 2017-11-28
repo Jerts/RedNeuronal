@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
+
 using namespace std;
 
 #ifndef _LABEL_H_INCLUDED_
@@ -17,10 +18,12 @@ private:
 public:
   FILE *lbl;  //Puntero al archivo
   char dataAux;
+
   int data[1];
   void header(); //Imprime el header del archivo
   void read_lbl(int index); //Lee la imagen con indice: index
   Etiqueta(char *nombre); //Constructor, recibe el apuntador al archivo
+
 };
 
 #endif
