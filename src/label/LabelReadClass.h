@@ -19,7 +19,7 @@ public:
   FILE *lbl;  //Puntero al archivo
   char dataAux;
 
-  int data[1];
+  unsigned data;
   void header(); //Imprime el header del archivo
   void read_lbl(int index); //Lee la imagen con indice: index
   Etiqueta(char *nombre); //Constructor, recibe el apuntador al archivo
