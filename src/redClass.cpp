@@ -46,7 +46,7 @@ void NeuNet::reset(){
 }
 void NeuNet::guardarMat(){
   FILE *arch;
-  arch = fopen("model-neural-network.dat","w");
+  arch = fopen("model-neural-network.dat","wb");
   if (arch != NULL) {
     cout<<"Entro"<<endl;
     for (int i = 0; i < n1; i++) {
@@ -156,29 +156,27 @@ int NeuNet::learning_process() {
     return epochs;
 }
 void NeuNet::load_model() {
-  FILE *arch;
-  arch = fopen("model-neural-network.dat","r");
-  if (arch != NULL) {
+  ifstream file("model-neural-network.dat", ios::in);
+
+
     cout<<"Entro"<<endl;
     for (int i = 0; i < n1; i++) {
       for (int j = 0; j < n2; j++) {
-        fscanf(arch, "%f ",&w1[i][j]);
+        file >> w1[i][j];
         //printf("%f ",w1[i][j]);
       }
+        //fscanf(arch, "%c ",aux);
       //printf("\n");
     }
 
     for (int i = 0; i < n2; i++) {
       for (int j = 0; j < n3; j++) {
-        fscanf(arch, "%f ",&w2[i][j]);
+        file >> w2[i][j];
         //printf("%f ",w1[i][j]);
       }
       //printf("\n");
     }
-    fclose(arch);
-  }
+    file.close();
 
-  else{
-    cout<<"Problema al leer los pesos"<<endl;
-  }
+
 }

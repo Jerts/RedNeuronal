@@ -25,7 +25,7 @@ int main(){
             //IMG.header(); //Se imprime el header
             Net.guardarMat();
             //Lee 20 imagenes
-            for (int n = 0; n < 2000; n++) {
+            for (int n = 0; n < 4000; n++) {
               IMG.read_img(n);
               LABEL.read_lbl(n);
               Net.input(IMG.dataLineal, LABEL.dataVect);
@@ -49,25 +49,27 @@ int main(){
             break;
       case 2:
             Net.reset();
-            Net.load_model(); // Load model (weight matrices) of a trained Neural Network
+            Net.load_model(); // Carga los pesos
 
             for (int n = 0; n < 200; n++) {
                 cout << "Ejemplo " << n << endl;
 
-                // Getting (image, label)
+                // Lee la imagen y la etiqueta
                 IMG.read_img(n);
                 LABEL.read_lbl(n);
                 Net.input(IMG.dataLineal, LABEL.dataVect);
 
-                // Classification - Perceptron procedure
+                // Calcula las salidas
                 Net.perceptron();
 
                 // Prediction
                 int predict = 0;
                 for (int i = 0; i < 10; i++) {
+                    cout<<Net.out3[i]<<" ";
                     if (Net.out3[i] > Net.out3[predict]) {
                       predict = i;
                     }
+                    cout<<endl;
                 }
 
                 // Write down the classification result and the squared error
