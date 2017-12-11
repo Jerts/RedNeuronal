@@ -21,6 +21,7 @@ public:
   FILE *img;  //Puntero al archivo
   char dataAux;
   int data[28][28]; //Contiene la imagen en 1's y 0's
+  int dataLineal[784]; //Datos en forma lineal
   void header(); //Imprime el header del archivo
   void read_img(int index); //Le la imagen con indice: index
   imagen(char *nombre); //Constructor, recibe el apuntador al archivo

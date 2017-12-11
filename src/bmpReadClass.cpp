@@ -44,6 +44,12 @@ void imagen::read_img(int index){
     }
 
     fclose(img);
+    for (int i = 0; i < 28; i++) {
+        for (int j = 0; j < 28; j++) {
+            int pos = j + (i) * 28;
+            dataLineal[pos] = data[i][j];
+        }
+	  }
   }
   else{
     cout<<"Archivo no encontrado"<<endl;

@@ -1,2 +1,2 @@
-bmpRead: src/bmpReadClass.cpp src/main.cpp
-	g++ src/bmpReadClass.cpp src/main.cpp -o build/Test
+bmpRead: src/bmpReadClass.cpp src/main.cpp src/LabelReadClass.cpp src/redClass.cpp
+	g++ src/bmpReadClass.cpp src/main.cpp src/LabelReadClass.cpp src/redClass.cpp -o build/Test
