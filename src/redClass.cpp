@@ -21,7 +21,7 @@ void NeuNet::input(int img[784], double esperados[10]){
 }
 
 void NeuNet::reset(){
-  // Initialization for weights from Input layer to Hidden layer
+  // Se inician los pesos para la capa 1
     for (int i = 0; i < n1; ++i) {
         for (int j = 0; j < n2; ++j) {
             int sign = rand() % 2;
@@ -32,7 +32,7 @@ void NeuNet::reset(){
         }
 	}
 
-	// Initialization for weights from Hidden layer to Output layer
+	// Se inician los pesos para la capa 2
     for (int i = 0; i < n2; i++) {
         for (int j = 0; j < n3; j++) {
           int sign = rand() % 2;

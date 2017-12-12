@@ -72,7 +72,7 @@ int main(){
                     cout<<endl;
                 }
 
-                // Write down the classification result and the squared error
+                // Escribe la calasificación y el error
                 double error = Net.square_error();
                 printf("Error: %0.6lf\n", error);
 
